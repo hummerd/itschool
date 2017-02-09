@@ -1,0 +1,20 @@
+
+<canvas width="360" height="360" />
+
+
+<script type="text/javascript">
+	c = document.getElementsByTagName("canvas")[0];
+ 	canvas = c.getContext("2d");
+
+	canvas.moveTo(0, 180);
+
+	for(i = 0; i <= 360; i += 1) {
+		x = i;
+		y = 180 - 100 * Math.sin(x / 5);
+
+		canvas.lineTo(x,y);
+	}
+
+	canvas.strokeStyle = 'red';
+	canvas.stroke();	
+</script>

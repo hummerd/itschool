@@ -1,0 +1,31 @@
+<!-- Как решить квадратное уравнение -->
+axx + bx + c = 0
+
+a <textarea>4</textarea>
+b <textarea>5</textarea>
+c <textarea>1</textarea>
+
+<button onclick="solve()">Solve</button>
+
+Answer <textarea></textarea><textarea></textarea>
+
+
+<script type="text/javascript">
+
+function solve() {
+  
+  a = document.body.children[0].value;
+  b = document.body.children[1].value;
+  c = document.body.children[2].value;
+	
+
+  dd = b * b - 4 * a * c; 
+  x1 = (-1 * b + Math.sqrt(dd)) / 2*a;
+  x2 = (-1 * b - Math.sqrt(dd)) / 2*a;
+
+
+  document.body.children[4].value = x1;
+  document.body.children[5].value = x2;
+}
+
+</script>
